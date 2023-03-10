@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -execdir sh -c 'chmod ugo+x "$0"' {} \+ &
+find . -type d -exec chmod u+rwx,g+rx,o+rx {} \+ -o -type f -exec chmod u+r,g+r,o+r {} \+
